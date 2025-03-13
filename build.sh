@@ -7,27 +7,20 @@ echo "Current directory: $(pwd)"
 echo "Listing files in current directory:"
 ls -la
 
-# Try to initialize git submodules
-echo "Trying to initialize git submodules..."
-git submodule update --init --recursive || true
+# Skip submodule initialization entirely and just clone the repositories directly
+echo "Removing any existing rszin directory..."
+rm -rf rszin
 
-# If rszin directory doesn't exist or is empty, clone it directly
-echo "Checking if rszin directory exists and has content..."
-if [ ! -d "rszin" ] || [ -z "$(ls -A rszin 2>/dev/null)" ]; then
-  echo "Rszin directory doesn't exist or is empty, cloning directly..."
-  rm -rf rszin
-  git clone https://github.com/arielszin/rszin.git rszin
-  cd rszin
-  git checkout master
-  cd ..
-fi
-
-# Check if rszin directory exists
-echo "Checking if rszin directory exists..."
+echo "Cloning rszin repository directly..."
+git clone https://github.com/arielszin/rszin.git rszin
 if [ ! -d "rszin" ]; then
-  echo "Error: rszin directory not found!"
+  echo "Error: Failed to clone rszin repository!"
   exit 1
 fi
+
+cd rszin
+git checkout master
+cd ..
 
 # Check if Hugo configuration file exists
 echo "Checking if Hugo configuration file exists..."
@@ -36,18 +29,17 @@ if [ ! -f "rszin/hugo.toml" ]; then
   exit 1
 fi
 
-# Check if themes directory exists
-echo "Checking if themes directory exists..."
-if [ ! -d "rszin/themes" ]; then
-  echo "Error: themes directory not found!"
-  mkdir -p rszin/themes
-fi
+# Ensure themes directory exists
+echo "Ensuring themes directory exists..."
+mkdir -p rszin/themes
 
-# Check if dario theme exists, if not clone it
-echo "Checking if dario theme exists..."
+# Clone dario theme directly
+echo "Cloning dario theme directly..."
+rm -rf rszin/themes/dario
+git clone https://github.com/GrantBirki/dario.git rszin/themes/dario
 if [ ! -d "rszin/themes/dario" ]; then
-  echo "Dario theme not found, cloning it..."
-  git clone https://github.com/GrantBirki/dario.git rszin/themes/dario
+  echo "Error: Failed to clone dario theme!"
+  exit 1
 fi
 
 # Navigate to the Hugo project directory
@@ -58,6 +50,14 @@ cd rszin
 echo "Current directory: $(pwd)"
 echo "Listing files in current directory:"
 ls -la
+
+# List themes directory
+echo "Listing themes directory:"
+ls -la themes/
+
+# List dario theme directory
+echo "Listing dario theme directory:"
+ls -la themes/dario/
 
 # Build the Hugo site
 echo "Building the Hugo site..."
