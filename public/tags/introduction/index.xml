@@ -1,19 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Introduction on RSZIN</title>
-    <link>http://localhost:1313/tags/introduction/</link>
-    <description>Recent content in Introduction on RSZIN</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 13 Mar 2025 15:47:07 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/introduction/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hello World - My First Post</title>
-      <link>http://localhost:1313/posts/2025-03-13-hello-world---my-first-post/</link>
-      <pubDate>Thu, 13 Mar 2025 15:47:07 -0400</pubDate>
-      <guid>http://localhost:1313/posts/2025-03-13-hello-world---my-first-post/</guid>
-      <description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello World!&lt;/h1&gt;&#xA;&lt;p&gt;Welcome to my first post on the RSZIN website. This is a test post to demonstrate how to create and publish content using Hugo.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-hugo&#34;&gt;What is Hugo?&lt;/h2&gt;&#xA;&lt;p&gt;Hugo is a fast and modern static site generator written in Go, and designed to make website creation fun again. Hugo is a general-purpose website framework. Technically speaking, Hugo is a static site generator.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-i-chose-hugo&#34;&gt;Why I Chose Hugo&lt;/h2&gt;&#xA;&lt;p&gt;Some reasons I chose Hugo for this website:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Introduction on RSZIN</title><link>https://www.rszin.com/tags/introduction/</link><description>Recent content in Introduction on RSZIN</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 13 Mar 2025 15:47:07 -0400</lastBuildDate><atom:link href="https://www.rszin.com/tags/introduction/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello World - My First Post</title><link>https://www.rszin.com/posts/2025-03-13-hello-world---my-first-post/</link><pubDate>Thu, 13 Mar 2025 15:47:07 -0400</pubDate><guid>https://www.rszin.com/posts/2025-03-13-hello-world---my-first-post/</guid><description>&lt;h1 id="hello-world">Hello World!&lt;/h1>
+&lt;p>Welcome to my first post on the RSZIN website. This is a test post to demonstrate how to create and publish content using Hugo.&lt;/p>
+&lt;h2 id="what-is-hugo">What is Hugo?&lt;/h2>
+&lt;p>Hugo is a fast and modern static site generator written in Go, and designed to make website creation fun again. Hugo is a general-purpose website framework. Technically speaking, Hugo is a static site generator.&lt;/p>
+&lt;h2 id="why-i-chose-hugo">Why I Chose Hugo&lt;/h2>
+&lt;p>Some reasons I chose Hugo for this website:&lt;/p></description></item></channel></rss>

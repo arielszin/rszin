@@ -1,19 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on RSZIN</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on RSZIN</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 13 Mar 2025 15:47:07 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hello World - My First Post</title>
-      <link>http://localhost:1313/posts/2025-03-13-hello-world---my-first-post/</link>
-      <pubDate>Thu, 13 Mar 2025 15:47:07 -0400</pubDate>
-      <guid>http://localhost:1313/posts/2025-03-13-hello-world---my-first-post/</guid>
-      <description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello World!&lt;/h1&gt;&#xA;&lt;p&gt;Welcome to my first post on the RSZIN website. This is a test post to demonstrate how to create and publish content using Hugo.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-hugo&#34;&gt;What is Hugo?&lt;/h2&gt;&#xA;&lt;p&gt;Hugo is a fast and modern static site generator written in Go, and designed to make website creation fun again. Hugo is a general-purpose website framework. Technically speaking, Hugo is a static site generator.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-i-chose-hugo&#34;&gt;Why I Chose Hugo&lt;/h2&gt;&#xA;&lt;p&gt;Some reasons I chose Hugo for this website:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on RSZIN</title><link>https://www.rszin.com/posts/</link><description>Recent content in Posts on RSZIN</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 13 Mar 2025 16:31:22 -0400</lastBuildDate><atom:link href="https://www.rszin.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Testing Public Repository</title><link>https://www.rszin.com/posts/2025-03-13-testing-public-repository/</link><pubDate>Thu, 13 Mar 2025 16:31:22 -0400</pubDate><guid>https://www.rszin.com/posts/2025-03-13-testing-public-repository/</guid><description>&lt;h1 id="testing-public-repository">Testing Public Repository&lt;/h1>
+&lt;p>This is a test post to verify that our public repository setup is working correctly. After making our repository public, we want to ensure that the deployment process still works smoothly.&lt;/p>
+&lt;h2 id="what-weve-done">What We&amp;rsquo;ve Done&lt;/h2>
+&lt;ol>
+&lt;li>Simplified the build script&lt;/li>
+&lt;li>Updated the repository structure&lt;/li>
+&lt;li>Made the repository public&lt;/li>
+&lt;li>Created this test post&lt;/li>
+&lt;/ol>
+&lt;h2 id="benefits-of-a-public-repository">Benefits of a Public Repository&lt;/h2>
+&lt;p>Having a public repository offers several advantages:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Transparency&lt;/strong>: Others can see how the site is built&lt;/li>
+&lt;li>&lt;strong>Collaboration&lt;/strong>: Makes it easier for others to contribute&lt;/li>
+&lt;li>&lt;strong>Simplicity&lt;/strong>: Simplified deployment process&lt;/li>
+&lt;li>&lt;strong>Learning&lt;/strong>: Others can learn from our code&lt;/li>
+&lt;/ul>
+&lt;h2 id="next-steps">Next Steps&lt;/h2>
+&lt;p>Now that we have a public repository, we can:&lt;/p></description></item><item><title>Hello World - My First Post</title><link>https://www.rszin.com/posts/2025-03-13-hello-world---my-first-post/</link><pubDate>Thu, 13 Mar 2025 15:47:07 -0400</pubDate><guid>https://www.rszin.com/posts/2025-03-13-hello-world---my-first-post/</guid><description>&lt;h1 id="hello-world">Hello World!&lt;/h1>
+&lt;p>Welcome to my first post on the RSZIN website. This is a test post to demonstrate how to create and publish content using Hugo.&lt;/p>
+&lt;h2 id="what-is-hugo">What is Hugo?&lt;/h2>
+&lt;p>Hugo is a fast and modern static site generator written in Go, and designed to make website creation fun again. Hugo is a general-purpose website framework. Technically speaking, Hugo is a static site generator.&lt;/p>
+&lt;h2 id="why-i-chose-hugo">Why I Chose Hugo&lt;/h2>
+&lt;p>Some reasons I chose Hugo for this website:&lt;/p></description></item></channel></rss>
