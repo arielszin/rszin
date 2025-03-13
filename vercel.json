@@ -1,6 +1,6 @@
 {
   "buildCommand": "./build.sh",
-  "outputDirectory": "rszin/public",
+  "outputDirectory": "public",
   "build": {
     "env": {
       "HUGO_VERSION": "0.111.3"

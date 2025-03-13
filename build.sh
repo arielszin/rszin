@@ -65,5 +65,20 @@ ls -la public
 # Return to the root directory
 cd ..
 
+# Copy the public directory to the root
+echo "Copying the public directory to the root..."
+rm -rf public
+cp -r rszin/public .
+
+# Check if public directory was copied
+echo "Checking if public directory was copied..."
+if [ ! -d "public" ]; then
+  echo "Error: public directory not copied!"
+  exit 1
+fi
+
+echo "Listing files in root public directory:"
+ls -la public
+
 # Print success message
 echo "Build completed successfully!" 
