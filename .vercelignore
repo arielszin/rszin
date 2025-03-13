@@ -1,4 +1,5 @@
-.git
+# Don't ignore .git directory as it's needed for git submodules
+# .git
 .github
 README.md
 .DS_Store

@@ -1,5 +1,5 @@
 {
-  "buildCommand": "git submodule update --init --recursive && cd rszin && hugo --gc --minify",
+  "buildCommand": "./build.sh",
   "outputDirectory": "rszin/public",
   "build": {
     "env": {
