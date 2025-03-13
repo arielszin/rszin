@@ -1,0 +1,4 @@
+[submodule "rszin"]
+	path = rszin
+	url = https://github.com/arielszin/rszin.git
+	branch = master 
