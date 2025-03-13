@@ -14,12 +14,13 @@ This repository contains the source code for my personal website built with Hugo
 
 1. Clone this repository:
    ```bash
-   git clone git@github.com:arielszin/rszin.git
+   git clone --recursive git@github.com:arielszin/rszin.git
    cd rszin
    ```
 
 2. Start the Hugo development server:
    ```bash
+   cd rszin
    hugo server -D
    ```
 
@@ -36,6 +37,7 @@ This repository contains the source code for my personal website built with Hugo
 #### Manually:
 
 ```bash
+cd rszin
 hugo new content/posts/YYYY-MM-DD-post-title.md
 ```
 
@@ -66,11 +68,25 @@ Update the Hugo version in `vercel.json` when needed.
 
 ### Updating the Theme
 
-If using a theme as a Git submodule:
+The "dario" theme is managed as a Git submodule and is pinned to a specific commit for stability and security.
+
+To update the theme:
 
 ```bash
-git submodule update --remote --merge
+cd rszin/themes/dario
+git fetch origin
+git log --oneline origin/main  # View available commits
+git checkout [new-commit-hash]  # Choose a specific commit
+cd ../../..
+git add rszin/themes/dario
+git commit -m "Update dario theme to newer commit"
 ```
+
+For more information on theme management, see [rszin/themes/README.md](rszin/themes/README.md).
+
+## Project Structure
+
+The Hugo project is located in the `rszin/` directory. See [rszin/README.md](rszin/README.md) for more information on the project structure.
 
 ## Custom Domain
 
