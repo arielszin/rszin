@@ -60,6 +60,19 @@ The site is automatically deployed to Vercel when changes are pushed to the main
 
 3. Vercel will automatically build and deploy the site.
 
+#### Build Process
+
+The build process is handled by the `build.sh` script, which:
+1. Initializes git submodules
+2. Navigates to the Hugo project directory
+3. Builds the Hugo site with minification
+
+The `vercel.json` file is configured to use this build script:
+
+```json
+"buildCommand": "./build.sh"
+```
+
 ## Maintenance
 
 ### Updating Hugo
@@ -91,3 +104,9 @@ The Hugo project is located in the `rszin/` directory. See [rszin/README.md](rsz
 ## Custom Domain
 
 The site is configured to use www.rszin.com as the custom domain. DNS is managed through GoDaddy. 
+
+The `vercel.json` file has been updated to include a command to initialize git submodules before building the Hugo site:
+
+```json
+"buildCommand": "git submodule update --init --recursive && cd rszin && hugo --gc --minify"
+``` 
