@@ -7,9 +7,20 @@ echo "Current directory: $(pwd)"
 echo "Listing files in current directory:"
 ls -la
 
-# Initialize git submodules
-echo "Initializing git submodules..."
-git submodule update --init --recursive
+# Try to initialize git submodules
+echo "Trying to initialize git submodules..."
+git submodule update --init --recursive || true
+
+# If rszin directory doesn't exist or is empty, clone it directly
+echo "Checking if rszin directory exists and has content..."
+if [ ! -d "rszin" ] || [ -z "$(ls -A rszin 2>/dev/null)" ]; then
+  echo "Rszin directory doesn't exist or is empty, cloning directly..."
+  rm -rf rszin
+  git clone https://github.com/arielszin/rszin.git rszin
+  cd rszin
+  git checkout master
+  cd ..
+fi
 
 # Check if rszin directory exists
 echo "Checking if rszin directory exists..."
@@ -29,14 +40,14 @@ fi
 echo "Checking if themes directory exists..."
 if [ ! -d "rszin/themes" ]; then
   echo "Error: themes directory not found!"
-  exit 1
+  mkdir -p rszin/themes
 fi
 
-# Check if dario theme exists
+# Check if dario theme exists, if not clone it
 echo "Checking if dario theme exists..."
 if [ ! -d "rszin/themes/dario" ]; then
-  echo "Error: dario theme not found!"
-  exit 1
+  echo "Dario theme not found, cloning it..."
+  git clone https://github.com/GrantBirki/dario.git rszin/themes/dario
 fi
 
 # Navigate to the Hugo project directory
