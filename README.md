@@ -2,6 +2,15 @@
 
 This repository contains the source code for my personal website built with Hugo and deployed on Vercel.
 
+## Repository Structure
+
+This repository has been simplified for public access. The main components are:
+
+- `rszin/`: The main Hugo website directory
+- `build.sh`: A simplified build script for Vercel deployment
+- `vercel.json`: Configuration for Vercel deployment
+- `new-post.sh`: Script to create new blog posts
+
 ## Development Workflow
 
 ### Prerequisites
@@ -14,99 +23,49 @@ This repository contains the source code for my personal website built with Hugo
 
 1. Clone this repository:
    ```bash
-   git clone --recursive git@github.com:arielszin/rszin.git
+   git clone --recursive https://github.com/arielszin/RSZIN.git
+   cd RSZIN
+   ```
+
+2. Navigate to the Hugo project directory:
+   ```bash
    cd rszin
    ```
 
-2. Start the Hugo development server:
+3. Start the Hugo development server:
    ```bash
-   cd rszin
    hugo server -D
    ```
 
-3. Visit `http://localhost:1313` to see your site.
+4. Open your browser and visit http://localhost:1313 to see the site.
 
 ### Creating New Content
 
-#### Using the helper script:
+Use the provided script to create new posts:
 
 ```bash
 ./new-post.sh "My New Post Title"
 ```
 
-#### Manually:
+This will create a new post file in the `rszin/content/posts/` directory with the current date and a slug based on the title.
 
-```bash
-cd rszin
-hugo new content/posts/YYYY-MM-DD-post-title.md
-```
+## Deployment
 
-Edit the file to add your content. Set `draft: false` when ready to publish.
-
-### Deployment
-
-The site is automatically deployed to Vercel when changes are pushed to the main branch.
-
-1. Commit your changes:
-   ```bash
-   git add .
-   git commit -m "Add new post: My Post Title"
-   ```
-
-2. Push to GitHub:
-   ```bash
-   git push
-   ```
-
-3. Vercel will automatically build and deploy the site.
-
-#### Build Process
-
-The build process is handled by the `build.sh` script, which:
-1. Initializes git submodules
-2. Navigates to the Hugo project directory
-3. Builds the Hugo site with minification
+The site is automatically deployed to Vercel when changes are pushed to the main branch. The deployment process uses the `build.sh` script to build the Hugo site.
 
 The `vercel.json` file is configured to use this build script:
 
 ```json
-"buildCommand": "./build.sh"
+{
+  "buildCommand": "./build.sh",
+  "outputDirectory": "public"
+}
 ```
 
 ## Maintenance
 
-### Updating Hugo
+See [MAINTENANCE.md](MAINTENANCE.md) for a checklist of regular maintenance tasks.
 
-Update the Hugo version in `vercel.json` when needed.
+## License
 
-### Updating the Theme
-
-The "dario" theme is managed as a Git submodule and is pinned to a specific commit for stability and security.
-
-To update the theme:
-
-```bash
-cd rszin/themes/dario
-git fetch origin
-git log --oneline origin/main  # View available commits
-git checkout [new-commit-hash]  # Choose a specific commit
-cd ../../..
-git add rszin/themes/dario
-git commit -m "Update dario theme to newer commit"
-```
-
-For more information on theme management, see [rszin/themes/README.md](rszin/themes/README.md).
-
-## Project Structure
-
-The Hugo project is located in the `rszin/` directory. See [rszin/README.md](rszin/README.md) for more information on the project structure.
-
-## Custom Domain
-
-The site is configured to use www.rszin.com as the custom domain. DNS is managed through GoDaddy. 
-
-The `vercel.json` file has been updated to include a command to initialize git submodules before building the Hugo site:
-
-```json
-"buildCommand": "git submodule update --init --recursive && cd rszin && hugo --gc --minify"
-``` 
+This project is open source and available under the [MIT License](LICENSE). 
