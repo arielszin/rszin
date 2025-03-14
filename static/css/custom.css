@@ -1,4 +1,12 @@
 /* Custom styles for the home page content */
 .content-container section:first-child p:nth-child(2) {
     font-size: 24px; /* Adjust this value to your preferred size */
+}
+
+/* Style for the Posts h3 header */
+.content-container section h3 {
+    font-size: 1.6em; /* Match the theme's h3 size */
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
 } 
