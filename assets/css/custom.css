@@ -5,8 +5,8 @@
   --font-size-base: 20px; /* Reset to theme default */
 }
 
-/* Specifically target only the home page content text */
-.home-info .content p {
+/* Specifically target only the paragraph that contains the Content from hugo.toml */
+.content-container section:first-of-type p:nth-of-type(1) {
   font-size: 1.5em; /* Make only this specific content larger */
   line-height: 1.4;
 }
