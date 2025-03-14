@@ -1,6 +1,6 @@
 /* Custom styles for the home page content */
 .content-container section:first-child p:nth-child(2) {
-    font-size: 20px; /* Adjust this value to your preferred size */
+    font-size: 22px; /* Adjust this value to your preferred size */
 }
 
 /* Style for the Posts h3 header */
