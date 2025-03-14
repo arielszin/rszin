@@ -1,0 +1,27 @@
+/* Custom styles to override theme defaults */
+
+:root {
+  /* Increase the base font size from 20px to 24px */
+  --font-size-base: 24px;
+}
+
+/* Specifically target the home page content */
+.home-info .content {
+  font-size: 1.2em; /* Make the home page content even larger */
+}
+
+/* Ensure paragraphs in posts are also larger */
+.post-content p {
+  font-size: 1.1em;
+}
+
+/* Adjust headings if needed */
+.post-content h1 {
+  font-size: 2.2em;
+}
+
+.post-content h2 {
+  font-size: 1.8em;
+}
+
+/* Add any other custom styles below */ 
