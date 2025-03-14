@@ -14,6 +14,8 @@ This repository has been simplified for ease of maintenance. The main components
 - `new-post.sh`: Script to create new blog posts
 - `hugo.toml`: Hugo configuration file
 - `cleanup-redundancies.sh`: Script to clean up unnecessary files (can be run as needed)
+- `static/css/custom.css`: Custom CSS styles for the website
+- `layouts/partials/head.html`: Custom head template that includes the custom CSS
 
 Note: Some standard Hugo directories (like `static/`, `layouts/`, etc.) will be created automatically by Hugo when needed.
 
@@ -86,9 +88,64 @@ The main configuration file is `hugo.toml`. You can edit this file to change:
 - Base URL
 - Theme settings
 
+### Style Customization
+
+The site uses a custom CSS file (`static/css/custom.css`) to override specific styles from the theme. This approach ensures that customizations persist even when the theme is updated.
+
+#### How to Customize Specific Elements
+
+1. **Home Page Content Font Size**:
+   
+   The font size of the "Questions, Exploratory Musings, Projects" text on the home page is currently set to 24px. To change this size, edit the following in `static/css/custom.css`:
+
+   ```css
+   .content-container section:first-child p:nth-child(2) {
+       font-size: 24px; /* Adjust this value to your preferred size */
+   }
+   ```
+
+2. **To Customize Post Page Styles**:
+   
+   Add CSS selectors targeting post content. For example, to increase the font size of post titles:
+
+   ```css
+   /* Add this to static/css/custom.css */
+   .content-container h1 {
+       font-size: 2.5em; /* Adjust this value to your preferred size */
+   }
+   ```
+
+3. **To Customize Other Elements**:
+   
+   a. First, identify the HTML structure of the element you want to customize:
+      - Use browser developer tools to inspect the element
+      - Look at the theme's HTML templates in `themes/dario/layouts/`
+   
+   b. Add a CSS selector to `static/css/custom.css` targeting that element:
+      ```css
+      /* Example: Change the color of links */
+      a {
+          color: #0066cc;
+      }
+      
+      /* Example: Change the font size of the site header */
+      .site-header h1 {
+          font-size: 2em;
+      }
+      ```
+
+4. **Adding New CSS Files**:
+   
+   If you want to add additional CSS files, add them to the `static/css/` directory and then include them in `layouts/partials/head.html`:
+
+   ```html
+   <!-- Add this line in layouts/partials/head.html -->
+   <link rel="stylesheet" href="{{ "css/your-new-file.css" | relURL }}" />
+   ```
+
 ### Theme Customization
 
-If you want to customize the theme, you can:
+For more extensive customizations:
 
 1. Create a `layouts/` directory to override theme templates
 2. Create a `static/` directory for custom CSS, JavaScript, or images
@@ -126,6 +183,11 @@ The `vercel.json` file is configured to use this build script and includes secur
 2. **Build Errors**: Check the Hugo version in `vercel.json` matches the version you're using locally.
 
 3. **Deployment Issues**: Verify that Vercel is configured to use the `main` branch and the correct build command.
+
+4. **CSS Changes Not Appearing**: If your CSS changes aren't visible:
+   - Clear your browser cache
+   - Check that the CSS file is being loaded (using browser developer tools)
+   - Verify the CSS selector is correctly targeting the element
 
 ## Maintenance
 
