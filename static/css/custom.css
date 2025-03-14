@@ -1,6 +1,7 @@
 /* Custom styles for the home page content */
 .content-container section:first-child p:nth-child(2) {
     font-size: 22px !important; /* Added !important to override any other styles */
+    color: #0066cc !important; /* Test color to verify CSS is being applied */
 }
 
 /* Style for the Posts h3 header */
