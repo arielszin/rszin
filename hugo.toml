@@ -1,10 +1,10 @@
 baseURL = "https://www.rszin.com/"
    languageCode = "en-us"
-   title = "Ariel R Szin"
+   title = "Ariel Szin"
    theme = "dario"
 
    [params]
-     author = "Ariel R Szin"
+     author = "Ariel Szin"
      description = "Questions,Exploratory Musings"
 
      [params.homeInfoParams]
