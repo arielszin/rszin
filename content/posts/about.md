@@ -1,7 +1,7 @@
 +++
 date = '2025-03-11T10:48:31-04:00'
 draft = false
-title = ''
+title = 'About'
 +++
 
 This is the about page for RSZIN. This site is built with Hugo and deployed on Vercel.
