@@ -1,0 +1,13 @@
+baseURL = "https://www.rszin.com/"
+   languageCode = "en-us"
+   title = "RSZIN"
+   theme = "dario"
+
+   [params]
+     author = "Ariel R Szin"
+     description = "Questions,Exploratory Musings"
+
+     [params.homeInfoParams]
+       Title = "Welcome to My Website"
+       Content = "This is a minimal web log inspired by Dario Amodei's personal website."
+       Description = "A minimal web log."

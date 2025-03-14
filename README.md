@@ -4,12 +4,16 @@ This repository contains the source code for my personal website built with Hugo
 
 ## Repository Structure
 
-This repository has been simplified for public access. The main components are:
+This repository has been simplified for ease of maintenance. The main components are:
 
-- `rszin/`: The main Hugo website directory
-- `build.sh`: A simplified build script for Vercel deployment
+- `content/`: Contains all the website content (posts, pages, etc.)
+- `themes/`: Contains the Hugo themes
+- `static/`: Static assets like images, CSS, etc.
+- `layouts/`: Custom layout templates
+- `build.sh`: A build script for Vercel deployment
 - `vercel.json`: Configuration for Vercel deployment
 - `new-post.sh`: Script to create new blog posts
+- `hugo.toml`: Hugo configuration file
 
 ## Development Workflow
 
@@ -23,21 +27,16 @@ This repository has been simplified for public access. The main components are:
 
 1. Clone this repository:
    ```bash
-   git clone --recursive https://github.com/arielszin/RSZIN.git
+   git clone https://github.com/arielszin/RSZIN.git
    cd RSZIN
    ```
 
-2. Navigate to the Hugo project directory:
-   ```bash
-   cd rszin
-   ```
-
-3. Start the Hugo development server:
+2. Start the Hugo development server:
    ```bash
    hugo server -D
    ```
 
-4. Open your browser and visit http://localhost:1313 to see the site.
+3. Open your browser and visit http://localhost:1313 to see the site.
 
 ### Creating New Content
 
@@ -47,7 +46,7 @@ Use the provided script to create new posts:
 ./new-post.sh "My New Post Title"
 ```
 
-This will create a new post file in the `rszin/content/posts/` directory with the current date and a slug based on the title.
+This will create a new post file in the `content/posts/` directory with the current date and a slug based on the title.
 
 ## Deployment
 

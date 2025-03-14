@@ -7,31 +7,13 @@ echo "Current directory: $(pwd)"
 echo "Listing files in current directory:"
 ls -la
 
-# Remove any existing rszin directory
-echo "Removing any existing rszin directory..."
-rm -rf rszin
-
-# Clone the repository
-echo "Cloning rszin repository directly..."
-git clone https://github.com/arielszin/rszin.git rszin
-
-# Check if the clone was successful
-if [ ! -d "rszin" ]; then
-  echo "Error: Failed to clone rszin repository!"
-  exit 1
-fi
-
-# List the contents of the cloned repository
-echo "Listing files in rszin directory:"
-ls -la rszin
-
 # Check if hugo.toml exists
-if [ ! -f "rszin/hugo.toml" ]; then
+if [ ! -f "hugo.toml" ]; then
   echo "Error: hugo.toml not found in the expected location!"
   echo "Creating a minimal Hugo configuration file..."
   
   # Create a minimal Hugo configuration file
-  cat > rszin/hugo.toml << EOF
+  cat > hugo.toml << EOF
 baseURL = "https://www.rszin.com/"
 languageCode = "en-us"
 title = "RSZIN"
@@ -49,38 +31,26 @@ EOF
 fi
 
 # Create themes directory if it doesn't exist
-if [ ! -d "rszin/themes" ]; then
+if [ ! -d "themes" ]; then
   echo "Creating themes directory..."
-  mkdir -p rszin/themes
+  mkdir -p themes
 fi
 
-# Clone dario theme directly
-echo "Cloning dario theme directly..."
-rm -rf rszin/themes/dario
-git clone https://github.com/GrantBirki/dario.git rszin/themes/dario
+# Check if dario theme exists, if not clone it
+if [ ! -d "themes/dario" ]; then
+  echo "Cloning dario theme..."
+  git clone https://github.com/GrantBirki/dario.git themes/dario
+fi
 
 # Check if the theme clone was successful
-if [ ! -d "rszin/themes/dario" ]; then
+if [ ! -d "themes/dario" ]; then
   echo "Error: Failed to clone dario theme!"
   exit 1
 fi
 
-# Navigate to the Hugo project directory
-echo "Navigating to the Hugo project directory..."
-cd rszin
-
-# Check current directory and list files
-echo "Current directory: $(pwd)"
-echo "Listing files in current directory:"
-ls -la
-
 # List themes directory
 echo "Listing themes directory:"
 ls -la themes/
-
-# List dario theme directory
-echo "Listing dario theme directory:"
-ls -la themes/dario/
 
 # Build the Hugo site
 echo "Building the Hugo site..."
@@ -94,24 +64,6 @@ if [ ! -d "public" ]; then
 fi
 
 echo "Listing files in public directory:"
-ls -la public
-
-# Return to the root directory
-cd ..
-
-# Copy the public directory to the root
-echo "Copying the public directory to the root..."
-rm -rf public
-cp -r rszin/public .
-
-# Check if public directory was copied
-echo "Checking if public directory was copied..."
-if [ ! -d "public" ]; then
-  echo "Error: public directory not copied!"
-  exit 1
-fi
-
-echo "Listing files in root public directory:"
 ls -la public
 
 # Print success message
