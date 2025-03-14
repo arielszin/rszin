@@ -1,4 +1,4 @@
-# Don't ignore .git directory as it's needed for git submodules
+# Files to ignore during Vercel deployment
 # .git
 .github
 README.md
