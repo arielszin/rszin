@@ -1,6 +1,6 @@
 baseURL = "https://www.rszin.com/"
    languageCode = "en-us"
-   title = "RSZIN"
+   title = "Ariel R Szin"
    theme = "dario"
 
    [params]
@@ -8,6 +8,6 @@ baseURL = "https://www.rszin.com/"
      description = "Questions,Exploratory Musings"
 
      [params.homeInfoParams]
-       Title = "Welcome to My Website"
-       Content = "This is a minimal web log inspired by Dario Amodei's personal website."
+#       Title = "Welcome to My Website"
+       Content = "Questions, Exploratory Musings, Projects"
        Description = "A minimal web log."
