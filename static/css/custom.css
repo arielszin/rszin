@@ -4,8 +4,8 @@
 }
 
 /* Style for the Posts h3 header */
-.content-container section h3 {
-    font-size: 1.6em !important; /* Match the theme's h3 size */
+.content-container section h4 {
+    font-size: 1.4em !important; /* Match the theme's h3 size */
     margin-top: 1em !important;
     margin-bottom: 0.5em !important;
     font-weight: 600 !important;
